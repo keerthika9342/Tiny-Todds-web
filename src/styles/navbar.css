@@ -1,0 +1,133 @@
+/* 🔥 GLOBAL FONT (ADD IN index.css if not added) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap'); */
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 90px;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 🔷 LOGO */
+.logo h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1b3c5a;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #ff5722;
+  font-weight: 800;
+}
+
+/* tagline */
+.tagline {
+  font-size: 12px;
+  color: #888;
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  align-items: center;
+}
+
+/* LINKS */
+.nav-links li {
+  font-size: 16px;
+  font-weight: 600;   /* 🔥 BOLD */
+  color: #2c3e50;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.4px;
+}
+
+/* 🔥 UNDERLINE ANIMATION */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff5722, #ff8a65);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* HOVER EFFECT */
+.nav-links li:hover {
+  color: #ff5722;
+  transform: translateY(-2px);
+}
+
+/* 🎯 ACTIVE LINK (OPTIONAL) */
+.nav-links li.active {
+  color: #ff5722;
+  font-weight: 700;
+}
+
+/* BUTTON */
+.cta {
+  background: linear-gradient(135deg, #ff5722, #ff8a65);
+  border: none;
+  padding: 11px 26px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.cta:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255,87,34,0.3);
+}
+
+
+/* remove default link style */
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff5722;
+}
+.logo-img {
+  width: 200px;   /* adjust */
+  height: auto;
+  margin-right: 0px;
+  vertical-align: middle;
+}
+
+/* logo link */
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}

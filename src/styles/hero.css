@@ -1,0 +1,105 @@
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1588072432836-e10032774350")
+    center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔥 PROFESSIONAL OVERLAY (teal tone) */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(15, 61, 62, 0.75),
+    rgba(15, 61, 62, 0.65)
+  );
+}
+
+/* 🔥 GLASS CONTENT (premium look) */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 40px;
+
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* subtitle */
+.hero-sub {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+/* 🔥 heading */
+.hero-content h1 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* accent word */
+.hero-content span {
+  color: #FF6B35; /* softer orange */
+}
+
+/* description */
+.hero-desc {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* buttons */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🔥 primary button */
+.primary-btn {
+  background: #FF6B35;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #e85a2a;
+}
+
+/* 🔥 secondary button */
+.secondary-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.1);
+}

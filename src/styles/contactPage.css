@@ -1,0 +1,207 @@
+/* LAYOUT */
+.contact-map-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+
+  margin: 60px auto;
+  max-width: 1200px;
+  height: 560px;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  background: #ffffff;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* LEFT PANEL */
+.branch-list {
+  padding: 25px;
+  background: linear-gradient(to bottom, #f9fbfd, #f3f6f9);
+  border-right: 1px solid #eee;
+  overflow-y: auto;
+}
+
+.branch-list h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #0f3d3e;
+  font-weight: 700;
+}
+
+/* CARD */
+.branch-item {
+  position: relative;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.branch-item:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* 🔥 ACTIVE (NEXT LEVEL) */
+.branch-item.active {
+  background: linear-gradient(135deg, #ff5a2c, #ff7a50);
+  color: #fff;
+
+  border: none;
+  transform: scale(1.03);
+
+  box-shadow: 0 18px 40px rgba(255, 90, 44, 0.35);
+}
+
+/* 🔥 TEXT CHANGE INSIDE ACTIVE */
+.branch-item.active h3,
+.branch-item.active .address,
+.branch-item.active .phone {
+  color: #ffffff;
+}
+
+/* 🔥 LEFT INDICATOR */
+.branch-item.active::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 6px;
+  height: 45%;
+  border-radius: 10px;
+
+  background: #ff5a2c;
+}
+
+/* TEXT */
+.branch-item h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.address {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.phone {
+  font-size: 13px;
+  color: #ff5a2c;
+  font-weight: 600;
+}
+
+/* MAP */
+.map-view {
+  position: relative;
+  height: 100%;
+  border-radius: 0 24px 24px 0;
+  overflow: hidden;
+}
+
+/* 🔥 MAP FRAME */
+.map-view iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  filter: grayscale(5%) contrast(1.05) brightness(0.98);
+  transform: scale(1.02);
+}
+
+/* 🔥 MAP GRADIENT OVERLAY (PRO LOOK) */
+.map-view::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0)
+  );
+
+  pointer-events: none;
+}
+
+/* FLOATING CARD */
+.map-card {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+
+  padding: 18px 22px;
+  border-radius: 18px;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+
+  animation: fadeUp 0.4s ease;
+}
+
+/* 🔥 TITLE */
+.map-card h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 🔥 TEXT */
+.map-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* 🔥 PHONE */
+.map-card span {
+  display: block;
+  margin-top: 6px;
+  color: #ff5a2c;
+  font-weight: 700;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLLBAR (PREMIUM) */
+.branch-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.branch-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ddd, #bbb);
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-map-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .map-view {
+    height: 380px;
+    border-radius: 0 0 24px 24px;
+  }
+}

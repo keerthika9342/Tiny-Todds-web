@@ -1,0 +1,110 @@
+.contact-section {
+  position: relative;
+  background: linear-gradient(135deg, #cfe8ff, #eaf6ff);
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 🔥 CARD */
+.contact-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+
+  padding: 60px 40px;
+  border-radius: 30px;
+  max-width: 650px;
+  margin: auto;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  transition: 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* TAG */
+.tag {
+  color: #ff5722;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.contact-card h2 {
+  font-size: 36px;
+  color: #1b3c53;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.contact-card span {
+  color: #ff5722;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 14px;
+  color: #6b7c93;
+  margin-bottom: 25px;
+}
+
+/* 🔥 BUTTON STYLE NUMBERS */
+.numbers {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #ff5722, #ff8a50);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.call-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,87,34,0.4);
+}
+
+/* outline button */
+.call-btn.outline {
+  background: transparent;
+  border: 2px solid #ff5722;
+  color: #ff5722;
+}
+
+.call-btn.outline:hover {
+  background: #ff5722;
+  color: white;
+}
+
+/* 🔥 DECOR CIRCLES */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.circle.one {
+  width: 250px;
+  height: 250px;
+  background: #ff5722;
+  top: -80px;
+  left: -80px;
+}
+
+.circle.two {
+  width: 200px;
+  height: 200px;
+  background: #2196f3;
+  bottom: -80px;
+  right: -80px;
+}

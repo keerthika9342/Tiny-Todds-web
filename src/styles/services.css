@@ -1,0 +1,126 @@
+.services {
+  padding: 100px 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff6f0, #e6f7ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎈 floating shapes */
+.services::before,
+.services::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.services::before {
+  width: 120px;
+  height: 120px;
+  background: #ff8a65;
+  top: 30px;
+  left: 40px;
+}
+
+.services::after {
+  width: 150px;
+  height: 150px;
+  background: #64b5f6;
+  bottom: 20px;
+  right: 40px;
+}
+
+/* heading */
+.service-sub {
+  color: #ff5722;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.service-title {
+  font-size: 40px;
+  color: #123c3c;
+  margin-bottom: 60px;
+  font-weight: 800;
+}
+
+/* layout */
+.service-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 🎨 CARD */
+.service-card {
+  width: 300px;
+  padding: 45px 25px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+
+  /* glass effect */
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.6);
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* hover */
+.service-card:hover {
+  transform: translateY(-15px) rotate(-1deg) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* 🎯 ICON */
+.card-icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+/* bouncing animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* text */
+.service-card h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* 🌈 colorful gradients */
+.vision {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+}
+
+.mission {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}
+
+.care {
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+}
+
+/* ✨ sparkle effect */
+.service-card::before {
+  content: "✨";
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 15px;
+  opacity: 0.6;
+}
+
